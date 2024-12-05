@@ -655,6 +655,9 @@ LRESULT WINAPI CSecondaryTray_v_WndProc_Hook(void* pThis,
                                              LPARAM lParam) {
     g_hookCallCounter++;
 
+    Wh_Log(L"Secondary taskbar %08X: %04X (%p, %p)", (DWORD)(ULONG_PTR)hWnd,
+           Msg, wParam, lParam);
+
     TaskbarWndProcPreProcess(hWnd, Msg, &wParam, &lParam);
 
     LRESULT ret =
