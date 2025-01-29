@@ -672,7 +672,7 @@ bool OnThumbnailWheelScroll(HWND hWnd,
     CTaskListThumbnailWnd__HandleContextMenu_Original(thumbnail, pt, 0);
     g_invokingContextMenuWParam = 0;
 
-    SetTimer(hWnd, kRefreshTaskbarTimer, 200, 0);
+    // SetTimer(hWnd, kRefreshTaskbarTimer, 200, 0);
 
     return true;
 }
